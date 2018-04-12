@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(mser
         mser.c)
+target_link_libraries(mser -lm )

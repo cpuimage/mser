@@ -79,7 +79,13 @@ uint64_t nanotimer() {
 #define M_PI       3.14159265358979323846   // pi
 #endif
 
+#ifndef max
+#define max(a, b)            (((a) > (b)) ? (a) : (b))
+#endif
 
+#ifndef min
+#define min(a, b)            (((a) < (b)) ? (a) : (b))
+#endif
 static double now() {
     static uint64_t epoch = 0;
     if (!epoch) {
