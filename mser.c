@@ -1711,7 +1711,6 @@ main(int argc, char **argv) {
     char err_msg[1024];
     int exit_code = 0;
     printf("blog:http://cpuimage.cnblogs.com/\n");
-    printf("e-mail:gaozhihan@vip.qq.com\n");
     if (argc != 3) {
         fprintf
                 (stderr,
