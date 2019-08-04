@@ -1691,10 +1691,6 @@ int CPUImageMser(unsigned char *data, int width, int height, int depth, float de
     if (filtinv) {
         mser_delete(filtinv);
     }
-    //release image data
-    if (data) {
-        free(data);
-    }
     if (datainv) {
         free(datainv);
     }
@@ -1738,5 +1734,7 @@ main(int argc, char **argv) {
     int dark_on_bright = 1;
     CPUImageMser(data, width, height, depth, delta, max_area, min_area, max_variation, min_diversity, dark_on_bright);
     saveJpeg(outputfile, width, height, depth, data);
+      //release image data
+    free(data);
     return (exit_code);
 }
